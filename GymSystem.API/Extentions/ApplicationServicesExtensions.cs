@@ -7,6 +7,7 @@ using GymSystem.DAL.Data;
 using GymSystem.DAL.Entities.Identity;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
+using GymSystem.DAL.Identity;
 
 namespace GymSystem.API.Extentions
 {
@@ -30,7 +31,7 @@ namespace GymSystem.API.Extentions
         .AddEntityFrameworkStores<GymSystemContext>()
         .AddDefaultTokenProviders();
 
-            services.Configure<ApiBehaviorOptions>(Options =>
+	         services.Configure<ApiBehaviorOptions>(Options =>
             {
                 Options.InvalidModelStateResponseFactory = (actionContext) =>
                 {

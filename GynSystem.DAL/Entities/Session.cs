@@ -10,12 +10,12 @@ using System.Threading.Tasks;
 namespace GymSystem.DAL.Entities
 {
     //نشاطًا اللي بيحصل في الجيم، زي اليوجا، التدريب الرياضي
-    public class Class : BaseEntity
+    public class Session : BaseEntity
     {
         public string? ImageUrl { get; set; }
         [NotMapped]
         public IFormFile Image { get; set; }
-        public string ClassName { get; set; }
+        public string SessionName { get; set; }
         public string Description { get; set; }
         public DateTime StartTime { get; set; }
         public DateTime EndTime { get; set; }

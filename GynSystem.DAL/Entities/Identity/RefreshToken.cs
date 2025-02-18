@@ -17,15 +17,16 @@ namespace GymSystem.DAL.Entities.Identity
     [Owned]
     public class RefreshToken
     {
-        public string Token { get; set; }
+		public int Id { get; set; }
+		public string Token { get; set; }
         public DateTime Expires { get; set; }
         public bool IsExpired => DateTime.UtcNow >= Expires;
-        public DateTime Created { get; set; }
+        public DateTime Created { get; set; } = DateTime.Now;
         public DateTime? Revoked { get; set; }
         public bool IsActive => Revoked == null && !IsExpired;
 
         // إضافة UserId كـ Foreign Key
-        public string UserId { get; set; }
-        public AppUser User { get; set; }
+        public string? UserId { get; set; }
+        public AppUser? User { get; set; }
     }
 }

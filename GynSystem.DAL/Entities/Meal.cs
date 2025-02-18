@@ -15,10 +15,12 @@ namespace GymSystem.DAL.Entities
         public IFormFile Image { get; set; }
         public string MealName { get; set; }
         public string Description { get; set; }
-        public bool IsDeleted { get; set; }
+        public bool? IsDeleted { get; set; }
+
+        //العلاقات
         public int? NutritionPlanId { get; set; }
         public NutritionPlan? NutritionPlan { get; set; }
-        public int MealsCategoryId { get; set; }
-        public MealsCategory MealsCategory { get; set; }
+        public int? MealsCategoryId { get; set; }
+        public MealsCategory? MealsCategory { get; set; }
     }
 }

@@ -29,7 +29,7 @@ namespace GymSystem.DAL.Identity
             modelBuilder.Entity<AppUser>()
                 .HasOne(u => u.Address)
                 .WithOne(a => a.User)
-                .HasForeignKey<Address>(a => a.AppUserId)
+                .HasForeignKey<Address>(a => a.UserId)
                 .OnDelete(DeleteBehavior.Cascade);
 
             // تكوين العلاقة بين AppUser و RefreshToken (واحد إلى كثير)

@@ -12,9 +12,9 @@ namespace GymSystem.DAL.Entities
     {
         public string? ImageUrl { get; set; }
         [NotMapped]
-        public IFormFile Image { get; set; }
+        public IFormFile? Image { get; set; }
         public string CategoryName { get; set; }
         public bool IsDeleted { get; set; }
-        public ICollection<Meal> Meals { get; set; }
+        public ICollection<Meal>? Meals { get; set; }
     }
 }

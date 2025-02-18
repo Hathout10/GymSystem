@@ -19,11 +19,13 @@ namespace GymSystem.DAL.Entities
         public bool IsStopped { get; set; } = false;
         public DateTime? StopDate { get; set; }
         public int HaveDays { get; set; }
-        public string AddBy { get; set; }
-        public int RemainingDays { get; set; }
+        public string? AddBy { get; set; }
+        public int? RemainingDays { get; set; }
+
+        //relation
         public int? DailyPlanId { get; set; }
-        public DailyPlan DailyPlan { get; set; }
+        public DailyPlan? DailyPlan { get; set; }
         public int? MonthlyPlanId { get; set; }
-        public MonthlyPlan MonthlyPlan { get; set; }
+        public MonthlyPlan? MonthlyPlan { get; set; }
     }
 }

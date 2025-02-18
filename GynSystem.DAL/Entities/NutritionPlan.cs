@@ -12,9 +12,9 @@ namespace GymSystem.DAL.Entities
     public class NutritionPlan : BaseEntity
     {
         public string PlanName { get; set; }
-        public string Description { get; set; }
+        public string? Description { get; set; }
         public bool IsDeleted { get; set; }
-        public ICollection<Meal> Meals { get; set; }
-        public ICollection<AppUser> Users { get; set; }
+        public ICollection<Meal>? Meals { get; set; }
+        public ICollection<AppUser>? Users { get; set; }
     }
 }

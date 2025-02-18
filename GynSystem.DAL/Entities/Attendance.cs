@@ -14,8 +14,8 @@ namespace GymSystem.DAL.Entities
 
         // العلاقات
         public string UserId { get; set; } // تم تغييرها من int إلى string لأن AppUser يستخدم Id من نوع string
-        public AppUser User { get; set; }
-        public int ClassId { get; set; }
-        public Class Class { get; set; }
+        public AppUser? User { get; set; }
+        public int? SessionId { get; set; }
+        public Session? Session { get; set; }
     }
 }

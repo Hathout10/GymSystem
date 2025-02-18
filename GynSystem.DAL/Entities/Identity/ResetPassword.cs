@@ -11,12 +11,15 @@ namespace GymSystem.DAL.Entities.Identity
 {
     public class ResetPassword
     {
+        [Required]
         [EmailAddress]
         public string Email { get; set; }
 
-        public string Password { get; set; }
+		[Required]
+		public string Password { get; set; }
 
-        [Compare("Password", ErrorMessage = "Passwords do not match")]
+		[Required]
+		[Compare("Password", ErrorMessage = "Passwords do not match")]
         public string ConfirmPassword { get; set; }
     }
 }

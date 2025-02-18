@@ -14,7 +14,7 @@ namespace GymSystem.DAL.Data.Config
             // 2. تكوين العلاقة مع Address (واحد إلى واحد)
             builder.HasOne(u => u.Address)
                    .WithOne(a => a.User)
-                   .HasForeignKey<Address>(a => a.AppUserId)
+                   .HasForeignKey<Address>(a => a.UserId)
                    .OnDelete(DeleteBehavior.Cascade);
 
             // 3. تكوين العلاقة مع DailyPlan (واحد إلى واحد اختياري)
