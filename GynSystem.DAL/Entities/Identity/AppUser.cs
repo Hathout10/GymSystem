@@ -11,11 +11,11 @@ namespace GymSystem.DAL.Entities.Identity
         // الخصائص الأساسية
         public string DisplayName { get; set; }
         public Address Address { get; set; }
-        public int UserRole { get; set; } // يمكن استخدام الأدوار (Roles) بدلاً من هذه الخاصية
+        public int? UserRole { get; set; } // يمكن استخدام الأدوار (Roles) بدلاً من هذه الخاصية
         public bool IsDeleted { get; set; }
         public DateTime? DeletedAt { get; set; }
         public string? ProfileImageName { get; set; }
-        public string UserCode { get; set; }
+        public string? UserCode { get; set; }
 
         [NotMapped]
         public IFormFile? Image { get; set; }
@@ -28,21 +28,21 @@ namespace GymSystem.DAL.Entities.Identity
         public bool IsStopped { get; set; } = false;
         public DateTime? StopDate { get; set; }
         public int HaveDays { get; set; }
-        public string AddBy { get; set; }
-        public int RemainingDays { get; set; }
+        public string? AddBy { get; set; }
+        public int? RemainingDays { get; set; }
 
         // العلاقات
         public int? DailyPlanId { get; set; }
-        public DailyPlan DailyPlan { get; set; }
+        public DailyPlan? DailyPlan { get; set; }
 
         public int? MonthlyPlanId { get; set; }
-        public MonthlyPlan MonthlyPlan { get; set; }
+        public MonthlyPlan? MonthlyPlan { get; set; }
 
         public int? NutritionPlanId { get; set; }
-        public NutritionPlan NutritionPlan { get; set; }
+        public NutritionPlan? NutritionPlan { get; set; }
 
-        public ICollection<Membership> Memberships { get; set; } = new List<Membership>();
-        public ICollection<Attendance> Attendances { get; set; } = new List<Attendance>();
-        public ICollection<RefreshToken> RefreshTokens { get; set; } = new List<RefreshToken>();
+        public ICollection<Membership>? Memberships { get; set; } = new List<Membership>();
+        public ICollection<Attendance>? Attendances { get; set; } = new List<Attendance>();
+        public ICollection<RefreshToken>? RefreshTokens { get; set; } = new List<RefreshToken>();
     }
 }
