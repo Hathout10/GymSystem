@@ -8,10 +8,11 @@ using GymSystem.DAL.Entities.Identity;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using GymSystem.DAL.Identity;
+using GymSystem.BLL.Services.Trainer;
 
 namespace GymSystem.API.Extentions
 {
-    public static class ApplicationServicesExtensions
+	public static class ApplicationServicesExtensions
     {
         public static IServiceCollection AddApplicationServices(this IServiceCollection services)
         {
@@ -28,8 +29,9 @@ namespace GymSystem.API.Extentions
                 options.Password.RequireUppercase = true;
                 options.Password.RequireLowercase = true;
             })
-        .AddEntityFrameworkStores<GymSystemContext>()
-        .AddDefaultTokenProviders();
+        .AddEntityFrameworkStores<AppIdentityDbContext>()
+		.AddSignInManager()
+		.AddDefaultTokenProviders();
 
 	         services.Configure<ApiBehaviorOptions>(Options =>
             {

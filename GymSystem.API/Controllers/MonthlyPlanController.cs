@@ -1,6 +1,5 @@
 ﻿using AutoMapper;
 using GymSystem.BLL.Dtos.MonthlyPlan;
-using GymSystem.BLL.Interfaces;
 using GymSystem.BLL.Specifications;
 using GymSystem.BLL.Errors;
 using GymSystem.API.Helpers;
@@ -9,10 +8,11 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using System.Collections.Generic;
 using System.Threading.Tasks;
+using GymSystem.BLL.Interfaces.Business;
 
 namespace GymSystem.API.Controllers
 {
-    [Authorize]
+	[Authorize]
     public class MonthlyPlanController : BaseApiController
     {
         private readonly IMonthlyPlanService _monthlyPlanService;

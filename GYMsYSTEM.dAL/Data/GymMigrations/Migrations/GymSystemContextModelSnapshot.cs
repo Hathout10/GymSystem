@@ -8,7 +8,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
 
-namespace GynSystem.DAL.Migrations.GymSystem
+namespace GYMsYSTEM.dAL.Data.GymMigrations.Migrations
 {
     [DbContext(typeof(GymSystemContext))]
     partial class GymSystemContextModelSnapshot : ModelSnapshot
@@ -289,7 +289,8 @@ namespace GynSystem.DAL.Migrations.GymSystem
                     b.Property<int?>("SessionId")
                         .HasColumnType("int");
 
-                  
+                    b.Property<int?>("SessionId1")
+                        .HasColumnType("int");
 
                     b.Property<DateTime>("StartDate")
                         .HasColumnType("datetime2");
@@ -304,6 +305,7 @@ namespace GynSystem.DAL.Migrations.GymSystem
 
                     b.HasIndex("SessionId");
 
+                    b.HasIndex("SessionId1");
 
                     b.HasIndex("SubscriptionPlanId");
 

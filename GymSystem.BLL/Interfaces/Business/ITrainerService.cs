@@ -1,5 +1,4 @@
-﻿using GymSystem.API.DTOs.Trainer;
-using GymSystem.BLL.Dtos.Trainer;
+﻿using GymSystem.BLL.Dtos.Trainer;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -8,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace GymSystem.BLL.Interfaces.Business
 {
-    public interface ITrainerService
+	public interface ITrainerService
     {
         Task<TrainerDto> GetTrainerByIdAsync(string id);
         Task<IEnumerable<TrainerDto>> GetAllTrainersAsync();

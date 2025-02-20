@@ -1,5 +1,4 @@
-﻿using GymSystem.API.DTOs.Trainer;
-using GymSystem.BLL.Errors;
+﻿using GymSystem.BLL.Errors;
 using GymSystem.BLL.Dtos.Trainer;
 using GymSystem.BLL.Interfaces;
 using GymSystem.BLL.Interfaces.Business;
@@ -10,8 +9,8 @@ using System.Threading.Tasks;
 
 namespace GymSystem.API.Controllers
 {
-   
-    [Authorize(Roles = "Admin")] // Only Admin can manage trainers
+
+	[Authorize(Roles = "Admin")] // Only Admin can manage trainers
     public class TrainersController : BaseApiController
     {
         private readonly ITrainerService _trainerService;

@@ -4,6 +4,7 @@ using GymSystem.BLL.Interfaces;
 using GymSystem.BLL.Specifications.MonthlyPlan_Specification;
 using GymSystem.BLL.Specifications;
 using GymSystem.DAL.Entities;
+using GymSystem.BLL.Interfaces.Business;
 
 public class MonthlyPlanService : IMonthlyPlanService
 {

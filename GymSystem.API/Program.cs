@@ -17,6 +17,7 @@ public class Program
 		builder.Services.AddControllers();
 		builder.Services.AddEndpointsApiExplorer();
 		builder.Services.AddSwaggerGen();
+		
 
 		// Configure Database Contexts
 		builder.Services.AddDbContext<GymSystemContext>(options =>
@@ -36,12 +37,13 @@ public class Program
 		// Add Custom Services
 		builder.Services.AddApplicationServices();
 
+		builder.Services.AddAuthentication();
 		// Configure Identity Services
-		builder.Services.AddIdentity<AppUser, IdentityRole>()
-				.AddEntityFrameworkStores<AppIdentityDbContext>()
-				.AddDefaultTokenProviders()
-				.AddSignInManager();
-
+		//builder.Services.AddIdentity<AppUser, IdentityRole>()
+		//		.AddEntityFrameworkStores<AppIdentityDbContext>()
+		//		.AddDefaultTokenProviders()
+		//		.AddSignInManager();
+		builder.Services.AddScoped<UserManager<AppUser>>();
 
 		var app = builder.Build();
 
@@ -71,7 +73,7 @@ public class Program
 
 			var userManager = services.GetRequiredService<UserManager<AppUser>>();
 			var roleManager = services.GetRequiredService<RoleManager<IdentityRole>>();
-			//await AppIdentityDbContextSeed.SeedUsersAsync(userManager, roleManager);
+			await AppIdentityDbContextSeed.SeedUsersAsync(userManager, roleManager);
 		}
 		catch (Exception ex)
 		{

@@ -4,19 +4,16 @@ using GymSystem.DAL.Identity;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
-using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
 
-namespace GynSystem.DAL.Migrations
+namespace GYMsYSTEM.dAL.Data.IdentityMigrations.Migrations
 {
     [DbContext(typeof(AppIdentityDbContext))]
-    [Migration("20250217183224_initialCreateidentity")]
-    partial class initialCreateidentity
+    partial class AppIdentityDbContextModelSnapshot : ModelSnapshot
     {
-        /// <inheritdoc />
-        protected override void BuildTargetModel(ModelBuilder modelBuilder)
+        protected override void BuildModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder

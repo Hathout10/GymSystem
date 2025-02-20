@@ -1,11 +1,10 @@
 ﻿using AutoMapper;
-using GymSystem.API.DTOs.Trainer;
 using GymSystem.BLL.Dtos.Trainer;
 using GymSystem.DAL.Entities.Identity;
 
 namespace GymSystem.API.Helpers
 {
-    public class MappingProfiles :Profile
+	public class MappingProfiles :Profile
     {
         public MappingProfiles()
         {
