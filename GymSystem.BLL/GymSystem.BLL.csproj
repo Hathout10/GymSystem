@@ -20,7 +20,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\GynSystem.DAL\GynSystem.DAL.csproj" />
+    <ProjectReference Include="..\GYMsYSTEM.dAL\GYMsYSTEM.dAL.csproj" />
   </ItemGroup>
 
 </Project>
